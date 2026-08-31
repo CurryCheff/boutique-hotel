@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import anime from 'animejs'
-import { hotel, waLink } from '../data/hotel'
+import { hotel, waLink, devEnquiry } from '../data/hotel'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -66,7 +66,7 @@ export default function Header() {
             {hotel.phoneDisplay}
           </a>
           <a
-            href={waLink("Hi Msasa House, I'd like to check availability.")}
+            href={waLink(devEnquiry.general)}
             target="_blank"
             rel="noreferrer"
             className="rounded-full bg-forest px-5 py-2.5 text-sm font-medium text-cream transition-colors hover:bg-forest-deep"
@@ -110,7 +110,7 @@ export default function Header() {
               Call {hotel.phoneDisplay}
             </a>
             <a
-              href={waLink("Hi Msasa House, I'd like to check availability.")}
+              href={waLink(devEnquiry.general)}
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-forest px-5 py-2.5 text-center text-sm font-medium text-cream"

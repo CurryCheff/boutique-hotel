@@ -8,10 +8,10 @@ export const hotel = {
   city: 'Harare',
   addressLine1: '17 Rolf Avenue, Highlands',
   addressLine2: 'Harare, Zimbabwe',
-  phoneDisplay: '+263 77 245 8890',
-  phoneHref: 'tel:+263772458890',
-  whatsappDisplay: '+263 77 245 8890',
-  whatsappNumber: '263772458890', // wa.me format, no leading +
+  phoneDisplay: '+263 77 366 3475',
+  phoneHref: 'tel:+263773663475',
+  whatsappDisplay: '+263 77 366 3475',
+  whatsappNumber: '263773663475', // wa.me format, no leading +
   email: 'stay@msasahouse.co.zw',
   mapsQuery: 'Rolf Avenue, Highlands, Harare, Zimbabwe',
 }
@@ -19,6 +19,20 @@ export const hotel = {
 export function waLink(prefilledText) {
   const base = `https://wa.me/${hotel.whatsappNumber}`
   return prefilledText ? `${base}?text=${encodeURIComponent(prefilledText)}` : base
+}
+
+// This site doubles as a portfolio piece — the WhatsApp CTAs go to the
+// developer's own number, prefilled as an enquiry about web development
+// services rather than an actual hotel booking.
+export const devEnquiry = {
+  general:
+    "Hi! I came across the Msasa House demo — I'd like to talk about getting a website built for my business.",
+  hero:
+    "Hi! I really like the Msasa House demo — can we talk about building something similar for me?",
+  room: (roomName) => {
+    const name = roomName.replace(/^the\s+/i, '')
+    return `Hi! I liked how the ${name} section was designed on the Msasa House demo — I'd like to talk about a website for my business.`
+  },
 }
 
 export const images = {

@@ -1,7 +1,7 @@
 import Parallax from '../components/Parallax'
 import Reveal from '../components/Reveal'
 import SkeletonImage from '../components/SkeletonImage'
-import { rooms, amenities, practical, images, waLink } from '../data/hotel'
+import { rooms, amenities, practical, images, waLink, devEnquiry } from '../data/hotel'
 
 const dividers = [images.jacaranda, images.pool, images.bedroomWindow]
 
@@ -83,14 +83,12 @@ export default function Rooms() {
                   </ul>
 
                   <a
-                    href={waLink(
-                      `Hi Msasa House, I'd like to enquire about the ${room.name}.`
-                    )}
+                    href={waLink(devEnquiry.room(room.name))}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-8 inline-block rounded-full bg-forest px-7 py-3 text-sm font-medium text-cream transition-colors hover:bg-forest-deep"
                   >
-                    Enquire about this room
+                    Like this section? Let's talk
                   </a>
                 </div>
               </Reveal>

@@ -1,4 +1,4 @@
-import { hotel, waLink } from '../data/hotel'
+import { hotel, waLink, devEnquiry } from '../data/hotel'
 
 const items = [
   {
@@ -13,7 +13,7 @@ const items = [
   {
     label: 'WhatsApp',
     value: hotel.whatsappDisplay,
-    href: waLink("Hi Msasa House, I'd like to make an enquiry."),
+    href: waLink(devEnquiry.general),
     note: 'Usually replies within the hour',
     external: true,
     icon: (

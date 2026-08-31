@@ -3,7 +3,7 @@ import Parallax from '../components/Parallax'
 import Reveal from '../components/Reveal'
 import ContactCTAs from '../components/ContactCTAs'
 import SkeletonImage from '../components/SkeletonImage'
-import { rooms, amenities, images, hotel, waLink } from '../data/hotel'
+import { rooms, amenities, images, hotel, waLink, devEnquiry } from '../data/hotel'
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
-              href={waLink("Hi Msasa House, I'd like to check availability.")}
+              href={waLink(devEnquiry.hero)}
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-rust px-8 py-3.5 text-sm font-medium text-cream transition-colors hover:bg-rust-dark"

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { hotel, waLink } from '../data/hotel'
+import { hotel, waLink, devEnquiry } from '../data/hotel'
 
 export default function Footer() {
   return (
@@ -35,7 +35,7 @@ export default function Footer() {
                 Call — {hotel.phoneDisplay}
               </a>
               <a
-                href={waLink("Hi Msasa House, I'd like to check availability.")}
+                href={waLink(devEnquiry.general)}
                 target="_blank"
                 rel="noreferrer"
                 className="text-cream/80 hover:text-gold"
