@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+
+  --color-cream: #f6f1e9;
+  --color-stone: #ece4d6;
+  --color-stone-dark: #d9cdb8;
+  --color-ink: #241f18;
+  --color-forest: #2d3b2a;
+  --color-forest-deep: #1c2619;
+  --color-rust: #b5562f;
+  --color-rust-dark: #8f4123;
+  --color-gold: #c99a4a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-rust);
+  color: var(--color-cream);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-stone) 30%,
+    var(--color-stone-dark) 50%,
+    var(--color-stone) 70%
+  );
+  background-size: 250% 100%;
+  animation: shimmer 1.7s ease-in-out infinite;
+}
